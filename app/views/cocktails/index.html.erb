@@ -6,7 +6,7 @@
   <% @cocktails.each do |cocktail| %>
     <div class="card">
       <div class="card-image" style="background-image: ">
-        <%= image_tag "tomcollins.jpg", alt: "alttext" %>
+        <%= image_tag "https://picsum.photos/200/300", alt: "alttext" %>
       </div>
       <div class="card-title">
         <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
