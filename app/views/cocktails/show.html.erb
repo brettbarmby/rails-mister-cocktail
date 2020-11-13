@@ -1,13 +1,26 @@
-<h1> <%= @cocktail.name.capitalize %> </h1>
-<ul>
-  <% @cocktail.doses.each  do |dose| %>
-    <li> <%= dose.description %>
-        <%= dose.ingredient.name %>
-        <%= link_to "Delete", dose_path(dose), method: "delete", data: { confirm: "Really?" } %>
-    </li>
-  <% end %>
-</ul>
+<div class="banner">
+  <div><h1> MR COCKTAIL </h1></div>
+  <div><%= link_to "Home", cocktails_path %></div>
+</div>
 
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Home", cocktails_path %>
+<div class="show-card">
+  <div class="show-card-image">
+      <%= image_tag "https://source.unsplash.com/featured/?cocktail", alt: "alttext" %>
+  </div>
+  <div class="show-card-content">
+    <h3> <%= @cocktail.name.capitalize %> </h3>
+    <ul>
+      <% @cocktail.doses.each  do |dose| %>
+        <li> <%= dose.description %>
+            <%= dose.ingredient.name %>
+            <%= link_to "Delete", dose_path(dose), method: "delete", data: { confirm: "Really?" } %>
+        </li>
+      <% end %>
+    </ul>
+    <div class="show-card-footer">
+      <div><%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %></div>
+    </div>
+  </div>
+</div>
+
 

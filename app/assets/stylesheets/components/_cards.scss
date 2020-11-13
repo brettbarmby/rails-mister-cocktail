@@ -11,8 +11,13 @@
 .card {
   border: none;
   height: 250px;
+}
+
+.card-image {
   img {
     height: 130px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -32,10 +37,6 @@
     font-weight: 700;
   }
 
-}
-
-.card-image {
-  background-image: cover;
 }
 
 .card-content {

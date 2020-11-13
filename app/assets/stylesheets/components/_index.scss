@@ -4,3 +4,29 @@
 @import "navbar";
 @import "cards";
 @import "banner";
+
+.show-card {
+  display: flex;
+  margin: 8px;
+}
+
+.show-card-image {
+  img {
+    height: 400px;
+    width: 300px;
+    // width: 33%;
+    object-fit: cover;
+  }
+
+  a {
+    text-decoration: none;
+    color: #767676
+  }
+}
+
+.show-card-content {
+  margin: 16px;
+  h3 {
+    font-weight: 600;
+  }
+}
